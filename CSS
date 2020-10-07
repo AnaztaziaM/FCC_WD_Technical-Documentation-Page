@@ -1,0 +1,265 @@
+
+/* Positioning the navigation bar to the left side.*/
+#navbar {
+  height: 100%;
+  width: 260px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #008080;
+  overflow-x: hidden;
+  padding-top: 20px;
+  border-right:solid;}
+
+#navbar a,#title {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black;
+  display: block;
+  font-size:24px;}
+
+#navbar a:hover {
+  color: #f1f1f1;}
+
+#main-doc {
+  margin-left: 260px; /* Same as the width of the sidenav */
+  font-size: 28px; /* Increased text to enable scrolling */
+  padding: 0px 10px;}
+
+
+
+/*Styling the table element.*/
+#exeple-table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size:24px;
+  border-collapse: collapse;
+  width: 92%;
+  margin-left: 50px;
+  white-space: pre-wrap;}
+
+#exeple-table td, #exeple-table th {
+  border: 2px solid #ddd;
+  padding: 8px;}
+
+#exeple-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#exemple-table tr:hover {background-color: #ddd;}
+
+#exemple-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;}
+
+/* Styling the body*/
+body{
+  background-color:#ceecef;}
+
+/* Styling the main sections.*/
+.main-section{
+  background-color:rgba(255, 255, 255, 0.7);
+  border-radius:5%;
+  margin-left: 50px;
+  margin-right: 50px;}
+
+.main-section p{
+  font-size:23px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align:justify;}
+
+/* Styling the nav button sections.*/
+.nav-link{
+  background-color:#a1dae1;
+  border-bottom:solid;}
+
+/* Styling the head lines.*/
+h1{
+  font-size:34px;
+  text-align:center;
+  font-family: "Monospace", Courier New, Lucida Console;}
+
+h2{
+  font-size:32px;
+  text-align:center;}
+h3{
+  font-size:27px;
+  margin-left: 50px;}
+h4{
+  font-size:24px;
+  margin-left: 50px;}
+
+/* Styling the python-logo.*/
+#header-img{
+  width:50px;
+  height:50px;
+  background-color:white;
+  margin-left: 100px;
+  border-radius:5%;
+  margin-bottom:20px;}
+
+
+/* Styling comment section.*/
+
+#comment{
+  background-color:#b0e0e6;
+  border-radius:5%;
+  margin-left: 50px;
+  margin-right: 50px;}
+#comment p{ 
+  font-size:24px;
+  margin-left: 50px;
+  margin-right: 50px;}
+
+
+/* Styling code blocks.*/
+#code-background{
+  background-color:#E5CCCC;
+  border-radius:5%;
+  margin-left: 50px;
+  margin-right: 50px;}
+
+code{
+  font-size:24px;
+  margin-left: 50px;
+  white-space: pre-wrap;}
+
+#exemple-background{background-color:white;
+margin-left: 50px;
+margin-right: 50px;
+border-radius:5%;
+border-left:solid;
+border-color: red;}
+
+/* Styling smaller elements.*/
+ul{
+  font-size:24px;
+  margin-left: 50px;}
+#blue{color: blue;}
+#red{color:red;}
+#result{text-decoration: underline red;}
+.sup{
+  position: relative;
+  bottom: 1ex; 
+  font-size: 80%;}
+#source{color:#246a73;}
+#source-text{
+  text-align:center;
+  margin-bottom:50px;
+  margin-left: 250px;}
+#result-img{
+  margin-left:200px;}
+
+
+
+/* Adding Media Query to small screen.*/
+@media screen and (max-width: 700px) {
+  
+  #navbar {
+    position: fixed;
+    height: 200px;
+    width: 97%;
+    z-index: 1;
+    text-align: center;
+    float: none;
+    top: 0;
+    left: auto;
+    padding-top: 0px;
+    margin-left: 5px;
+    margin-top: 5px;}
+  
+ 
+  :target{
+    padding-top:200px;
+    margin-top:-200px;}
+  
+  #navbar a {font-size:15px;}
+  
+  #title{font-size:20px;}
+  
+  #header-img{
+    width:35px;
+    height:35px;
+    margin-left: 45%;
+    margin-right: 50%;
+    margin-bottom:5px;}
+  
+  #result-img{
+    margin-left:10px;
+    width:270px;
+    height:190px;}
+  
+  #header{height:100px;}
+
+
+  #main-doc {
+    margin-top: 220px;
+    margin-left: 5px;}
+  
+  #exeple-table {
+    font-size:13px;
+    margin-left: 0px;}
+  
+  #exeple-table td, #exeple-table th {
+    padding: 2px;}}
+
+
+/* Adding Media Query to medium screen.*/  
+@media screen and (max-width: 1200px) {
+  .main-section{
+    margin-left: 5px;
+    margin-right: 5px;}
+  
+  .main-section p{
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size:17px;}
+  
+  #comment{
+    margin-left: 5px;
+    margin-right: 5px;}
+  
+  #comment p{ 
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size:17px;}
+  
+  #code-background{
+    margin-left: 5px;
+    margin-right: 5px;}
+  
+  code{
+    margin-left: 7px;
+    font-size:15px;}
+  
+  #exemple-background{
+    margin-left: 10px;
+    margin-right: 10px;}
+  
+  h1{
+    font-size:27px;}
+
+  h2{
+    font-size:24px;}
+  
+  h3{
+    font-size:22px;
+    margin-left: 10px;}
+  
+  h4{
+    font-size:20px;
+    margin-left: 10px;}
+  
+  ul{
+    font-size:17px;
+    margin-left:20px;}
+  
+  #exeple-table {
+    font-size:17px;
+    margin-left: 5px;}
+  
+  #source-text{
+    margin-left: 0px;}}
