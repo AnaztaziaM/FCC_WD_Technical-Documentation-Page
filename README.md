@@ -1,6 +1,6 @@
 # FCC_WD_Technical-Documentation-Page
-FreeCodeCamp- Responsive Web Design Certification course-Technical Documentation Page project.
-This project is one of the projects in FeeCodeCamp- Responsive Web Design Certification course. The README is created by Freecodecamp.I am using these to illustrate why is my code looks like it is. You can see my webpage here:https://codepen.io/anaztaziam/full/pobzwdy
+**FreeCodeCamp- Responsive Web Design Certification course-Technical Documentation Page project.**
+**This project is one of the projects in FeeCodeCamp- Responsive Web Design Certification course. The README is created by Freecodecamp.I am using these to illustrate why is my code looks like it is. You can see my webpage here:https://codepen.io/anaztaziam/full/pobzwdy**
 
 
 Objective: Build a CodePen.io app that is functionally similar to this: https://codepen.io/freeCodeCamp/full/NdrKKL.
