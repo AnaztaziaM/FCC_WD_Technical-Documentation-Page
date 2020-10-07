@@ -1,0 +1,1329 @@
+<!-- FreeCodeCamp test. -->  
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- My section -->  
+<body>
+   
+ <!-- Making a navigation bar. -->  
+<nav id="navbar">
+  <!-- Creating the head of the page. -->  
+  <header><h1 id="title">Machine Learning with Python</h1>
+  <img id= "header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1200px-Python-logo-notext.svg.png" alt="python-logo">
+   </header>
+  
+  <!-- Making a navigation buttons. -->  
+  <a href="#Getting_Started" class="nav-link">Getting started</a>
+  <a href="#Mean_Median_Mode" class="nav-link">Mean Median Mode</a>
+  <a href="#Standard_Deviation" class="nav-link">Standard Deviation</a>
+  <a href="#Percentiles" class="nav-link">Percentiles</a>
+  <a href="#Data_Distribution" class="nav-link">Data Distribution</a>
+  <a href="#Normal_Data_Distribution" class="nav-link">Normal Data Distribution</a>
+  <a href="#Scatter_Plot" class="nav-link">Scatter Plot</a>
+  <a href="#Linear_Regression" class="nav-link">Linear Regression</a>
+  <a href="#Polynomial_Regression" class="nav-link">Polynomial Regression</a>
+  <a href="#Part_2" class="nav-link">Part 2</a>
+  </nav>
+  
+
+ <!-- Main content. --> 
+<main id="main-doc">
+  
+ <section class="main-section" id="Getting_Started">
+   
+ <header><h2><br>Getting started<h2>
+ </header><br>
+   
+ <div id="comment">
+ <p><br>Machine Learning is making the computer learn from studying data and statistics.<br><br>
+Machine Learning is a step into the direction of artificial intelligence (AI).<br><br>
+Machine Learning is a program that analyses data and learns to predict the outcome.<br><br></p>
+ </div>
+   
+   
+ <h3>Where To Start?</h3>
+ <p>In this tutorial we will go back to mathematics and study statistics, and how to calculate important numbers based on data sets.<br>
+We will also learn how to use various Python modules to get the answers we need.<br>
+And we will learn how to make functions that are able to predict the outcome based on what we have learned.<br></p>
+   
+   
+ <h3>Data Set</h3>
+ <p>In the mind of a computer, a data set is any collection of data. It can be anything from an array to a complete database.<br><br>
+Example of an array:<br></p>
+   
+<div id="code-background"><br>
+ <code>[99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+ </div>
+     
+   
+ <p>Example of a database:<br></p>
+     <table  id="exeple-table">
+	<tbody>
+		<tr>
+			<td>Car name </td>
+			<td>Color</td>
+			<td>Age</td>
+			<td>Speed</td>
+			<td>Auto Pass</td>
+		</tr>
+		<tr>
+			<td>BMW</td>
+			<td>red</td>
+			<td>5</td>
+			<td>99</td>
+			<td>Y</td>
+		</tr>
+		<tr>
+			<td>Volvo</td>
+			<td>black</td>
+			<td>7</td>
+			<td>86</td>
+			<td>Y</td>
+		</tr>
+    <tr>
+			<td>VW</td>
+			<td>gray</td>
+			<td>8</td>
+			<td>87</td>
+			<td>N</td>
+		</tr>
+    <tr>
+			<td>VW</td>
+			<td>white</td>
+			<td>7</td>
+			<td>88</td>
+			<td>Y</td>
+      </tr>
+      <tr>
+        <td>Ford</td>
+        <td>white</td>
+        <td>2</td>
+        <td>111</td>
+        <td>Y</td>
+      </tr>
+      <tr>
+        <td>VW</td>
+        <td>white</td>
+        <td>17</td>
+        <td>86</td>
+        <td>Y</td>
+      </tr>
+      <tr>
+        <td>Tesla</td>
+        <td>red</td>
+        <td>2</td>
+        <td>103 </td>
+        <td>Y</td>
+      </tr>
+    	<tr>
+        <td>BMW</td>
+        <td>black</td>
+        <td>9</td>
+        <td>87</td>
+        <td>Y</td>
+      </tr>
+    	<tr>
+        <td>Volvo</td>
+        <td>gray</td>
+        <td>4</td>
+        <td>94</td>
+        <td>N</td>
+      </tr>
+      <tr>
+        <td>Ford </td>
+        <td>white</td>
+        <td>11</td>
+        <td>78</td>
+        <td>N</td>
+      </tr>
+      <tr>
+        <td>Toyota</td>
+        <td>gray</td>
+        <td>12</td>
+        <td>77</td>
+        <td>N</td>
+      </tr>
+    	<tr>
+        <td>VW</td>
+        <td>white</td>
+        <td>9</td>
+        <td>85</td>
+        <td>Y</td>
+      </tr>
+    	<tr>
+        <td>Toyota</td>
+        <td>blue</td>
+        <td>6</td>
+        <td>86</td>
+        <td>Y</td>
+      </tr>
+	</tbody>
+</table>
+  
+   
+<p> By looking at the array, we can guess that the average value is probably around 80 or 90, and we are also able to determine the highest value and the lowest value, but what else can we do?<br><br>
+And by looking at the database we can see that the most popular color is white, and the oldest car is 17 years, but what if we could predict if a car had an AutoPass, just by looking at the other values?<br><br>
+That is what Machine Learning is for! Analyzing data and predicting the outcome!<br><br> </p>  
+   
+   
+<div id="comment">
+ <p><br>In Machine Learning it is common to work with very large data sets. In this tutorial we will try to make it as easy as possible to understand the different concepts of machine learning, and we will work with small easy-to-understand data sets.<br><br></p>
+ </div>
+   
+   
+<h3>Data Types</h3>
+<p>To analyze data, it is important to know what type of data we are dealing with.<br><br>
+We can split the data types into three main categories:<br></p>
+   
+ <ul>
+  <li><strong>Numerical</strong></li>
+  <li><strong>Categorical</strong></li>
+  <li><strong>Ordinal</strong></li>
+</ul>  
+   
+ <p><strong>Numerical</strong> data are numbers, and can be split into two numerical categories:<br></p>
+   
+  <ul>
+  <li>Discrete Data</li>
+    <p>- numbers that are limited to integers. Example: The number of cars passing by.</p>
+  <li>Continuous Data</li>
+    <p>-numbers that are of infinite value. Example: The price of an item, or the size of an item</p>
+</ul>  
+   
+ <p><strong>Categorical</strong> data are values that cannot be measured up against each other. Example: a color value, or any yes/no values.<br><br>
+<strong>Ordinal</strong> data are like categorical data, but can be measured up against each other. Example: school grades where A is better than B and so on.<br><br>
+By knowing the data type of your data source, you will be able to know what technique to use when analyzing them.<br><br>
+You will learn more about statistics and analyzing data in the next chapters.<br></p><br>
+   
+</section>
+     
+   
+  
+   
+ <section class="main-section" id="Mean_Median_Mode">
+   
+<header><h2><br>Mean Median Mode</h2>
+</header>
+<br><br>
+   
+   
+ <h3>Mean, Median, and Mode</h3>
+ <p>What can we learn from looking at a group of numbers?<br><br>
+In Machine Learning (and in mathematics) there are often three values that interests us:<br></p>
+   
+<ul>
+  <li><strong>Mean</strong> - The average value</li>
+  <li><strong>Median</strong> - The mid point value</li>
+  <li><strong>Mode</strong> - The most common value</li>
+</ul> 
+   
+     
+ <p>Example: We have registered the speed of 13 cars:<br></p>
+   
+   
+ <div id="code-background"><br>
+ <code>speed = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br></div>
+     
+<p>What is the average, the middle, or the most common speed value?</p>
+     
+   
+ <h3>Mean</h3>
+ <p>The mean value is the average value.<br><br>
+To calculate the mean, find the sum of all values, and divide the sum by the number of values:<br></p>
+   
+     
+<div id="code-background"><br>
+<code>(99+ 86+ 87+ 88+ 111+ 86+ 103+ 87+ 94+ 78+ 77+ 85+ 86) / 13 = 89.77</code><br><br></div>
+     
+   
+ <p>The NumPy module has a method for this.</p>
+     
+     
+ <div id="code-background">
+   
+ <h4><br> Example</h4>
+ <p>Use the NumPy <span id="red">mean()</span> method to find the average speed:<br></p>
+       
+ <div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+<code>speed = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+<code>x = numpy.mean(speed)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+   
+<p id="result"> Result:</p>
+ <code>89.76923076923077</code><br><br>
+ </div>
+     
+     
+ <h3>Median</h3>
+<p>The median value is the value in the middle, after you have sorted all the values:<br></p>
+   
+<div id="code-background"><br>
+ <code>77, 78, 85, 86, 86, 86, <u>87</u>, 87, 88, 94, 99, 103, 111</code><br><br></div><br>
+   
+   
+   
+ <div id="comment">
+ <p><br>It is important that the numbers are sorted before you can find the median.<br><br></p></div>
+   
+<p>The NumPy module has a method for this:<br></p>
+     
+<div id="code-background">
+  
+ <h4><br>Example</h4>
+ <p>Use the NumPy <span id="red">median()</span> method to find the middle value:<br></p>
+  
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code>speed = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+<code>x = numpy.median(speed)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+ </div>
+  
+  <p id="result"> Result:</p>
+  <code>87.0</code><br><br>
+       
+ </div>
+ <br>
+   
+     
+ <div id="comment">
+ <p><br>If there are two numbers in the middle, divide the sum of those numbers by two.<br><br></p></div>
+     
+ <div id="code-background"><br>
+ <code>77, 78, 85, 86, 86, <u>86, 87</u>, 87, 94, 98, 99, 103</code><br><br>
+ <code>(86 + 87) / 2 = <u>86.5</u></code><br><br>
+  </div>
+  <br>
+   
+     
+<div id="code-background"><br>
+  
+<h4>Example</h4>
+<p>Using the NumPy module:<br></p>
+  
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code>speed = [99, 86, 87, 88, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+<code>x = numpy.median(speed)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+     
+<p id="result"> Result:</p>
+<code>86.5</code><br><br>
+       
+</div>
+     
+   
+   
+ <h3>Mode</h3>
+ <p>The Mode value is the value that appears the most number of times:<br> </p>
+     
+<div id="code-background"><br>
+<code>99, <u>86</u>, 87, 88, 111, <u>86</u>, 103, 87, 94, 78, 77, 85, <u>86</u> = 86</code><br><br></div>
+     
+<p>The SciPy module has a method for this.</p>
+     
+   
+<div id="code-background">
+  
+ <h4><br>Example</h4>
+  <p>Use the SciPy <span id="red">mode()</span> method to find the number that appears the most:<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">from</span> scipy <span id="blue">import</span> stats</code><br><br>
+<code>speed = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+<code>x = stats.mode(speed)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <code>ModeResult(mode=array([86]), count=array([3]))</code><br><br>
+       
+</div>
+   
+   
+     
+ <h3>Chapter Summary</h3>
+ <p>The Mean, Median, and Mode are techniques that are often used in Machine Learning, so it is important to understand the concept behind them.</p><br><br>
+     
+  </section>
+  
+<section class="main-section" id="Standard_Deviation">
+  
+<header><h2><br>Standard Deviation<h2>
+</header><br>
+     
+<h3>What is Standard Deviation?</h3>
+  
+<p>Standard deviation is a number that describes how spread out the values are.<br><br>
+A low standard deviation means that most of the numbers are close to the mean (average) value.<br><br>
+A high standard deviation means that the values are spread out over a wider range.<br><br>
+Example: This time we have registered the speed of 7 cars:<br></p>
+  
+<div id="code-background"><br>
+<code>speed = [86, 87, 88, 86, 87, 85, 86]</code><br><br></div>
+ 
+<p>The standard deviation is:<br></p>
+  
+<div id="code-background"><br>
+<code>0.9</code><br><br></div>
+
+<p>Meaning that most of the values are within the range of 0.9 from the mean value, which is 86.4.<br><br>
+Let us do the same with a selection of numbers with a wider range:<br></p>
+ 
+<div id="code-background"><br>
+<code>speed = [32,111,138,28,59,77,97]</code><br><br></div>
+  
+<p>The standard deviation is:<br></p>
+   
+<div id="code-background"><br>
+<code>37.85</code><br><br></div> 
+  
+<p>Meaning that most of the values are within the range of 37.85 from the mean value, which is 77.4.<br><br>
+As you can see, a higher standard deviation indicates that the values are spread out over a wider range.<br><br>
+The NumPy module has a method to calculate the standard deviation:<br></p> 
+  
+<div id="code-background">
+  
+ <h4><br>Example</h4>
+ <p>Use the NumPy <span id="red">std()</span>  method to find the standard deviation:<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+<code>speed = [86, 87, 88, 86, 87, 85, 86]</code><br><br>
+<code>x = numpy.std(speed)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <code>0.9035079029052513</code><br><br>
+       
+</div>
+  
+  
+<div id="code-background">
+  
+ <h4><br>Example</h4>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+<code>speed = [32, 111, 138, 28, 59, 77, 97]</code><br><br>
+<code>x = numpy.std(speed)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <code>37.84501153334721</code><br><br>
+       
+</div>
+  
+<h3>Variance</h3>
+  
+<p>Variance is another number that indicates how spread out the values are.<br><br>
+In fact, if you take the square root of the variance, you get the standard deviation!<br><br>
+Or the other way around, if you multiply the standard deviation by itself, you get the variance!<br><br>
+To calculate the variance you have to do as follows:<br><br>
+1. Find the mean:<br><br></p>
+  
+<div id="code-background"><br>
+<code>(32+ 111+ 138+ 28+ 59+ 77+ 97) / 7 = 77.4</code><br><br></div> 
+  
+ <p>2. For each value: find the difference from the mean:<br></p>
+   
+ <div id="code-background"><br>
+<code>32 - 77.4 = -45.4</code><br>
+<code>111 - 77.4 =  33.6</code><br>
+<code>138 - 77.4 =  60.6</code><br>
+<code>28 - 77.4 = -49.4</code><br>
+<code>59 - 77.4 = -18.4</code><br>
+<code>77 - 77.4 = - 0.4</code><br>
+<code>97 - 77.4 =  19.6</code>
+<br><br></div>  
+  
+  <p>3. For each difference: find the square value:<br></p>
+  
+<div id="code-background"><br>
+<code>(-45.4)<span class=sup>2</span> = 2061.16</code><br>
+<code>(33.6)<span class=sup>2</span> = 1128.96</code><br>
+<code>(60.6)<span class=sup>2</span> = 3672.36</code><br>
+<code>(-49.4)<span class=sup>2</span> = 2440.36</code><br>
+<code>(-18.4)<span class=sup>2</span> =  338.56</code><br>
+<code>(- 0.4)<span class=sup>2</span> =    0.16</code><br>
+<code>(19.6)<span class=sup>2</span> =  384.16</code>
+<br><br></div>  
+  
+<p>4. The variance is the average number of these squared differences:<br></p>  
+
+<div id="code-background"><br>
+<code>(2061.16+ 1128.96+ 3672.36+ 2440.36+ 338.56+ 0.16+ 384.16) / 7 = 1432.2</code>
+<br><br></div>  
+
+  <p>Luckily, NumPy has a method to calculate the variance:<br></p>
+  
+<div id="code-background">
+  
+ <h4><br>Example</h4>
+ <p>Use the NumPy <span id="red">var()</span>  method to find the variance:<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+<code>speed = [32, 111, 138, 28, 59, 77, 97]</code><br><br>
+<code>x = numpy.var(speed)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <code>1432.2448979591834</code><br><br>
+       
+</div>
+  
+ 
+<h3>Standard Deviation</h3>
+  
+<p>As we have learned, the formula to find the standard deviation is the square root of the variance:<br></p>
+  
+<div id="code-background"><br>
+<code>√1432.25 = 37.85</code>
+<br><br></div> 
+  
+<p>Or, as in the example from before, use the NumPy to calculate the standard deviation:<br></p>
+  
+  
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>Use the NumPy <span id="red">std()</span>  method to find the standard deviation:<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+<code>speed = [32, 111, 138, 28, 59, 77, 97]</code><br><br>
+<code>x = numpy.std(speed)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <code>37.84501153334721</code><br><br>
+       
+</div>
+  
+<h3>Symbols</h3>
+  
+<p>Standard Deviation is often represented by the symbol Sigma: σ<br><br>
+Variance is often represented by the symbol Sigma Square: σ2<br></p>
+
+  
+<h3>Chapter Summary</h3>
+  
+<p>The Standard Deviation and Variance are terms that are often used in Machine Learning, so it is important to understand how to get them, and the concept behind them.<br></p><br>
+  
+  </section>
+  
+  
+  
+  
+  
+ <section class="main-section" id="Percentiles">
+   
+<header><h2><br>Percentiles<br><h2>
+</header>
+ 
+<br>
+<h3> What are Percentiles?</h3>
+  
+<p>Percentiles are used in statistics to give you a number that describes the value that a given percent of the values are lower than.<br><br>
+Example: Let's say we have an array of the ages of all the people that lives in a street.<br></p>
+  
+<div id="code-background"><br>
+<code>ages = [5, 31, 43, 48, 50, 41, 7, 11, 15, 39, 80, 82, 32, 2, 8, 6, 25, 36, 27, 61, 31]</code>
+<br><br></div> 
+ 
+<p>What is the 75. percentile? The answer is 43, meaning that 75% of the people are 43 or younger.<br><br>
+The NumPy module has a method for finding the specified percentile:<br></p>
+  
+  
+    
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>Use the NumPy <span id="red">percentile()</span>  method to find the percentiles:<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+<code>ages = [5, 31, 43, 48, 50, 41, 7, 11, 15, 39, 80, 82, 32, 2, 8, 6, 25, 36, 27, 61, 31]</code><br><br>
+<code>x = numpy.percentile(ages, 75)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <code>43.0</code><br><br>
+       
+  </div>
+  
+  
+  
+    
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>What is the age that 90% of the people are younger than?<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+<code>ages = [5, 31, 43, 48, 50, 41, 7, 11, 15, 39, 80, 82, 32, 2, 8, 6, 25, 36, 27, 61, 31]</code><br><br>
+<code>x = numpy.percentile(ages, 90)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <code>61.0</code><br><br>
+       
+  </div>
+  <br><br>
+  
+   
+  </section>
+     
+ <section class="main-section" id="Data_Distribution">
+   
+ <header><h2><br>Data Distribution<br><h2>
+ </header>
+  
+<br>  
+<p>Earlier in this tutorial we have worked with very small amounts of data in our examples, just to understand the different concepts.<br><br>
+In the real world, the data sets are much bigger, but it can be difficult to gather real world data, at least at an early stage of a project.<br></p>
+   
+ <h3>How Can we Get Big Data Sets?</h3>
+   
+ <p>To create big data sets for testing, we use the Python module NumPy, which comes with a number of methods to create random data sets, of any size.<br></p>
+   
+   
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>Create an array containing 250 random floats between 0 and 5:<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+<code>x = numpy.random.uniform(0.0, 5.0, 250)</code><br><br>
+<code><span id="blue">print</span>(x)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <code>[4.16457941 2.53336934 0.76094645 2.19728824 0.26461522 2.47763846 
+ 1.01861707 1.81286031 3.31170377 1.82227842 0.9851678  3.39704211 .......]</code><br><br>
+       
+  </div>
+  <br><br>
+   
+<h3>Histogram</h3>
+   
+<p>To visualize the data set we can draw a histogram with the data we collected.<br><br>
+  We will use the Python module Matplotlib to draw a histogram:<br></p>
+   
+   
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>Draw a histogram:<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+  <code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code>x = numpy.random.uniform(0.0, 5.0, 250)</code><br><br>
+<code>plt.hist(x, 5)<br></code><br><br>
+<code>plt.show()<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_numpy_uniform3.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+   
+<h3>Histogram Explained</h3>
+   
+<p>We use the array from the example above to draw a histogram with 5 bars.<br><br>
+The first bar represents how many values in the array are between 0 and 1.<br><br>
+The second bar represents how many values are between 1 and 2.<br><br>
+Etc.<br><br>
+Which gives us this result:<br></p>
+   
+<ul>
+  <li>52 values are between 0 and 1</li>
+  <li>48 values are between 1 and 2</li>
+  <li>49 values are between 2 and 3</li>
+  <li>51 values are between 3 and 4</li>
+  <li>50 values are between 4 and 5</li>
+</ul> 
+   
+<div id="comment">
+  <p><br><strong>Note:</strong> The array values are random numbers and will not show the exact same result on your computer.<br><br></p>
+ </div>
+   
+<h3>Big Data Distributions</h3>
+   
+<p>An array containing 250 values is not considered very big, but now you know how to create a random set of values, and by changing the parameters, you can create the data set as big as you want.<br></p>
+   
+   
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>Create an array with 100000 random numbers, and display them using a histogram with 100 bars:<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+  <code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code>x = numpy.random.uniform(0.0, 5.0, 100000)</code><br><br>
+<code>plt.hist(x, 100)<br></code><br><br>
+<code>plt.show()<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_numpy_uniform_big2.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+   
+
+  </section>
+     
+     
+ <section class="main-section" id="Normal_Data_Distribution">
+   
+<header><h2><br>Normal Data Distribution<br><h2>
+</header>
+  
+ <br> 
+<p>In the previous chapter we learned how to create a completely random array, of a given size, and between two given values.<br><br>
+In this chapter we will learn how to create an array where the values are concentrated around a given value.<br><br>
+In probability theory this kind of data distribution is known as the normal data distribution, or the Gaussian data distribution, after the mathematician Carl Friedrich Gauss who came up with the formula of this data distribution.<br></p>
+  
+  
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>A typical normal data distribution:<br></p>
+        
+<div id="exemple-background"><br>
+ <code><span id="blue">import</span> numpy</code><br><br>
+  <code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code>x = numpy.random.normal(5.0, 1.0, 100000)</code><br><br>
+<code>plt.hist(x, 100)<br></code><br><br>
+<code>plt.show()<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_numpy_normal.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+   
+<div id="comment">
+  <p><br><strong>Note:</strong> A normal distribution graph is also known as the bell curve because of it's characteristic shape of a bell.<br><br></p>
+ </div> 
+  
+  
+ <h3>Histogram Explained</h3>
+  
+  <p>We use the array from the <span id="red">numpy.random.normal()</span> method, with 100000 values,  to draw a histogram with 100 bars.<br><br>
+We specify that the mean value is 5.0, and the standard deviation is 1.0.<br><br>
+Meaning that the values should be concentrated around 5.0, and rarely further away than 1.0 from the mean.<br><br>
+And as you can see from the histogram, most values are between 4.0 and 6.0, with a top at approximately 5.0.<br><br></p>
+  
+  </section>
+  
+     
+<section class="main-section" id="Scatter_Plot">
+  
+<header><h2><br>Scatter Plot<br><h2>
+</header>
+  
+<br>  
+<p>A scatter plot is a diagram where each value in the data set is represented by a dot.<br></p>  
+  
+<img id= "result-img" src="https://www.w3schools.com/python/img_scatterplot.png" alt="result-img"><br><br>
+  
+<p>The Matplotlib module has a method for drawing scatter plots, it needs two arrays of the same length, one for the values of the x-axis, and one for the values of the y-axis:<br></p>
+  
+<div id="code-background"><br>
+<code>x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6]</code><br><code>y = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br></div>
+  
+  <p>The <span id="red">x</span> array represents the age of each car.<br><br>
+    The <span id="red">y</span> array represents the speed of each car.<br></p>
+  
+ 
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>Use the <span id="red">scatter()</span> method to draw a scatter plot diagram:<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code>x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6]</code><br><br>
+ <code>y = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+<code>plt.scatter(x, y)<br></code><br><br>
+<code>plt.show()<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_matplotlib_scatter.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+  
+<h3>Scatter Plot Explained</h3>
+  
+<p>The x-axis represents ages, and the y-axis represents speeds.<br><br>
+What we can read from the diagram is that the two fastest cars were both 2 years old, and the slowest car was 12 years old.<br></p>
+  
+<div id="comment">
+  <p><br><strong>Note:</strong> It seems that the newer the car, the faster it drives, but that could be a coincidence, after all we only registered 13 cars.<br><br></p>
+ </div> 
+  
+<h3>Random Data Distributions</h3>
+ 
+<p>In Machine Learning the data sets can contain thousands-, or even millions, of values.<br><br>
+You might not have real world data when you are testing an algorithm, you might have to use randomly generated values.<br><br>
+As we have learned in the previous chapter, the NumPy module can help us with that!<br><br>
+Let us create two arrays that are both filled with 1000 random numbers from a normal data distribution.<br><br>
+The first array will have the mean set to 5.0 with a standard deviation of 1.0.<br><br>
+  The second array will have the mean set to 10.0 with a standard deviation of 2.0:<br></p>
+  
+  
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>A scatter plot with 1000 dots:<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code>x = numpy.random.normal(5.0, 1.0, 1000)</code><br><br>
+<code>y = numpy.random.normal(10.0, 2.0, 1000)</code><br><br>
+<code>plt.scatter(x, y)<br></code><br><br>
+<code>plt.show()<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_matplotlib_scatter_1000.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+  
+  
+<h3>Scatter Plot Explained</h3>
+  
+<p>We can see that the dots are concentrated around the value 5 on the x-axis, and 10 on the y-axis.<br><br>
+We can also see that the spread is wider on the y-axis than on the x-axis.<br><br></p>
+  
+  
+  </section>
+     
+  
+  
+<section class="main-section" id="Linear_Regression">
+  
+ <header><h2><br>Linear Regression<br><h2>
+ </header>
+ <br>
+<h3>Regression</h3>
+   
+<p>The term regression is used when you try to find the relationship between variables.<br><br>
+In Machine Learning, and in statistical modeling, that relationship is used to predict the outcome of future events.<br></p>
+   
+<h3>Linear Regression</h3>
+   
+<p>Linear regression uses the relationship between the data-points to draw a straight line through all them.<br><br>
+This line can be used to predict future values.<br></p>
+   
+<p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_linear_regression.png" alt="result-img"><br><br> 
+   
+   
+   <p>In Machine Learning, predicting the future is very important.<br></p>
+   
+   
+ <h3>How Does it Work?</h3>
+   
+<p>Python has methods for finding a relationship between data-points and to draw a line of linear regression. We will show you how to use these methods instead of going through the mathematic formula.<br><br>
+In the example below, the x-axis represents age, and the y-axis represents speed. We have registered the age and speed of 13 cars as they were passing a tollbooth. Let us see if the data we collected could be used in a linear regression:<br></p>
+   
+
+   
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>Start by drawing a scatter plot:<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code>x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6]</code><br><br>
+<code>y = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+<code>plt.scatter(x, y)<br></code><br><br>
+<code>plt.show()<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_matplotlib_scatter.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+   
+   
+   
+<div id="code-background">
+  
+<h4><br>Example</h4>
+  <p>Import <span id="red">scipy</span> and draw the line of Linear Regression:<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code><span id="blue">from</span> scipy<span id="blue">import</span> stats</code><br><br>
+<code>x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6]</code><br><br>
+<code>y = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+<code>slope, intercept, r, p, std_err = stats.linregress(x, y)<br></code><br><br>
+  <code><span id="blue">def</span> myfunc(x):<br></code><br><br>
+  <code>  <span id="blue">return</span> slope * x + intercept<br></code><br><br>
+  <code>mymodel = <span id="blue">list</span>(<span id="blue">map</span>(myfunc, x))<br></code><br><br>
+<code>plt.scatter(x, y)<br></code><br><br>
+<code>plt.plot(x, mymodel)<br></code><br><br>
+<code>plt.show()<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_linear_regression.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+   
+   
+ <h3>Example Explained</h3>
+   
+ <p>Import the modules you need.<br></p>
+   
+ <div id="code-background"><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br>
+<code><span id="blue">from</span> scipy<span id="blue">import</span> stats</code><br><br></div>
+      
+<p>Create the arrays that represent the values of the x and y axis:<br></p>  
+   
+<div id="code-background"><br>
+<code>x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6]</code><br>
+<code>y = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br></div>
+   
+<p>Execute a method that returns some important key values of Linear Regression:<br></p>   
+   
+<div id="code-background"><br>
+<code>slope, intercept, r, p, std_err = stats.linregress(x, y)<br></code><br></div>  
+   
+   <p>Create a function that uses the <span id="red">slope</span> and <span id="red">intercept</span> values to return a new value. This new value represents where on the y-axis the corresponding x value will be placed:<br></p>    
+   
+<div id="code-background"><br>
+ <code><span id="blue">def</span> myfunc(x):<br></code><br>
+  <code>  <span id="blue">return</span> slope * x + intercept<br></code><br></div>   
+   
+<p>Run each value of the x array through the function. This will result in a new array with new values for the y-axis:<br></p> 
+   
+<div id="code-background"><br>
+<code>mymodel = <span id="blue">list</span>(<span id="blue">map</span>(myfunc, x))<br></code><br></div> 
+   
+<p>Draw the original scatter plot:<br></p>   
+   
+   
+ <div id="code-background"><br>
+<code>plt.scatter(x, y)<br></code><br></div>  
+   
+<p>Draw the line of linear regression:<br></p>   
+   
+ <div id="code-background"><br>
+<code>plt.plot(x, mymodel)<br></code><br></div>  
+   
+<p>Display the diagram:<br></p>    
+   
+<div id="code-background"><br>
+<code>plt.show()<br></code><br></div>    
+   
+   
+<h3>R for Relationship</h3>
+   
+<p>It is important to know how the relationship between the values of the x-axis and the values of the y-axis is, if there are no relationship the linear regression can not be used to predict anything.<br><br>
+  This relationship - the coefficient of correlation - is called <span id="red">r</span>.<br><br>
+  The <span id="red">r</span> value ranges from 0 to 1, where 0 means no relationship, and 1 means 100% related.<br><br>
+Python and the Scipy module will compute this value for you, all you have to do is feed it with the x and y values.<br></p>
+   
+   
+   
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>How well does my data fit in a linear regression?<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">from</span> scipy<span id="blue">import</span> stats</code><br><br>
+<code>x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6]</code><br><br>
+<code>y = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+<code>slope, intercept, r, p, std_err = stats.linregress(x, y)<br></code><br><br>
+ <code><span id="red">print</span>(r)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <p>-0.758591524376155</p><br><br>
+       
+  </div>
+  <br><br>
+   
+<div id="comment">
+  <p><br><strong>Note:</strong> The result -0.76 shows that there is a relationship, not perfect, but it indicates that we could use linear regression in future predictions.<br><br></p>
+ </div>    
+ 
+ <h3>Predict Future Values</h3>
+   
+ <p>Now we can use the information we have gathered to predict future values.<br><br>
+Example: Let us try to predict the speed of a 10 years old car.<br><br>
+To do so, we need the same <span id="red">myfunc()</span> function from the example above:<br></p>
+   
+<div id="code-background"><br>
+  <code><span id="blue">def</span> myfunc(x):<br></code><br>
+<code><span id="blue">return</span> slope * x + intercept<br><br></code>
+</div>
+   
+   
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>Predict the speed of a 10 years old car:<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">from</span> scipy<span id="blue">import</span> stats</code><br><br>
+<code>x = [5, 7, 8, 7, 2, 17, 2, 9, 4, 11, 12, 9, 6]</code><br><br>
+<code>y = [99, 86, 87, 88, 111, 86, 103, 87, 94, 78, 77, 85, 86]</code><br><br>
+<code>slope, intercept, r, p, std_err = stats.linregress(x, y)<br></code><br><br>
+ <code><span id="blue">def</span> myfunc(x):<br></code><br>
+<code><span id="blue">return</span> slope * x + intercept<br><br></code>
+<code>speed = myfunc(10)<br><br></code>
+ <code><span id="red">print</span>(speed)<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <p>85.59308314937454</p><br><br>
+       
+  </div>
+  <br><br>
+   
+   <p>The example predicted a speed at 85.6, which we also could read from the diagram:<br></p>
+   
+   
+<img id= "result-img" src="https://www.w3schools.com/python/img_linear_regression2.png" alt="result-img"><br><br>
+   
+<h3>Bad Fit?</h3>
+   
+<p>Let us create an example where linear regression would not be the best method to predict future values.</p>  
+   
+ <div id="code-background">
+  
+<h4><br>Example</h4>
+<p>These values for the x- and y-axis should result in a very bad fit for linear regression:<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code><span id="blue">from</span> scipy<span id="blue">import</span> stats</code><br><br>
+<code>x = [89, 43, 36, 36, 95, 10, 66, 34, 38, 20, 26, 29, 48, 64, 6, 5, 36, 66, 72, 40]</code><br><br>
+<code>y = [21, 46, 3, 35, 67, 95, 53, 72, 58, 10, 26, 34, 90, 33, 38, 20, 56, 2, 47, 15]</code><br><br>
+<code>slope, intercept, r, p, std_err = stats.linregress(x, y)<br></code><br><br>
+ <code><span id="blue">def</span> myfunc(x):<br></code><br>
+<code><span id="blue">return</span> slope * x + intercept<br><br></code>
+  <code>mymodel = <span id="blue">list</span>(<span id="blue">map</span>(myfunc, x))<br><br></code>
+<code>plt.scatter(x, y)<br><br></code>
+<code>plt.plot(x, mymodel)<br><br></code>
+<code>plt.show()<br><br></code>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_linear_regression_badfit.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+   
+<p>And the r-squared value?</p>
+   
+   
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>You should get a very low r-squared value.<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code><span id="blue">from</span> scipy<span id="blue">import</span> stats</code><br><br>
+<code>x = [89, 43, 36, 36, 95, 10, 66, 34, 38, 20, 26, 29, 48, 64, 6, 5, 36, 66, 72, 40]</code><br><br>
+<code>y = [21, 46, 3, 35, 67, 95, 53, 72, 58, 10, 26, 34, 90, 33, 38, 20, 56, 2, 47, 15]</code><br><br>
+<code>slope, intercept, r, p, std_err = stats.linregress(x, y)</code><br><br>
+  <code><span id="blue">print</span>(r)<br><br></code>
+</div>
+     
+ <p id="result"> Result:</p>
+ <p>0.01331814154297491</p><br><br>
+       
+  </div>
+  <br><br>
+   
+<div id="comment">
+<p><br>The result: 0.013 indicates a very bad relationship, and tells us that this data set is not suitable for linear regression.<br><br></p>
+ </div>   
+   <br><br>
+   
+  </section>
+     
+   
+   
+<section class="main-section" id="Polynomial_Regression">
+  
+<header><h2><br>Polynomial Regression<br><h2>
+</header>
+  
+<br>  
+<p>If your data points clearly will not fit a linear regression (a straight line through all data points), it might be ideal for polynomial regression.<br><br>
+Polynomial regression, like linear regression, uses the relationship between the variables x and y to find the best way to draw a line through the data points.<br></p>
+  
+<img id= "result-img" src="https://www.w3schools.com/python/img_polynomial_regression.png" alt="result-img"><br><br> 
+  
+ <h3>How Does it Work?</h3>
+  
+<p>Python has methods for finding a relationship between data-points and to draw a line of polynomial regression. We will show you how to use these methods instead of going through the mathematic formula.<br><br>
+In the example below, we have registered 18 cars as they were passing a certain tollbooth.<br><br>
+We have registered the car's speed, and the time of day (hour) the passing occurred.<br><br>
+The x-axis represents the hours of the day and the y-axis represents the speed:<br></p>
+  
+
+<div id="code-background">
+  
+<h4><br>Example</h4>
+  <p>Start by drawing a scatter plot:<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code>x = [1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 21, 22]</code><br><br>
+<code>y = [100, 90, 80, 60, 60, 55, 60, 65, 70, 70, 75, 76, 78, 79, 90, 99, 99, 100]</code><br><br>
+<code>plt.scatter(x, y)<br></code><br><br>
+<code>plt.show()<br></code><br><br>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_polynomial_scatter.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+  
+  
+  <div id="code-background">
+  
+<h4><br>Example</h4>
+    <p>Import <span id="red">numpy</span> and <span id="red">matplotlib<span> then draw the line of Polynomial Regression:.<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code>x = [1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 21, 22]</code><br><br>
+<code>y = [100, 90, 80, 60, 60, 55, 60, 65, 70, 70, 75, 76, 78, 79, 90, 99, 99, 100]</code><br><br>
+<code>mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))</code><br><br>
+  <code>myline = numpy.linspace(1, 22, 100)</code><br><br>
+ <code>plt.scatter(x, y)</code><br>
+ <code>plt.plot(myline, mymodel(myline))</code><br>
+ <code>plt.show()<br><br></code>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_polynomial_regression.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>
+  
+      
+<h3>Example Explained</h3>
+    
+<p>Import the modules you need:<br></p>
+    
+<div id="code-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br></div>  
+  
+<p>Create the arrays that represent the values of the x and y axis:<br></p>
+    
+<div id="code-background"><br>
+<code>x = [1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 21, 22]</code><br><br>
+<code>y = [100, 90, 80, 60, 60, 55, 60, 65, 70, 70, 75, 76, 78, 79, 90, 99, 99, 100]</code><br><br></div>  
+    
+    
+<p>NumPy has a method that lets us make a polynomial model:<br></p>
+    
+<div id="code-background"><br>
+<code>mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))</code><br><br></div>  
+    
+    
+<p>Then specify how the line will display, we start at position 1, and end at position 22:<br></p>
+    
+<div id="code-background"><br>
+<code>myline = numpy.linspace(1, 22, 100)</code><br><br></div>  
+  
+<p>Draw the original scatter plot:<br></p>
+    
+<div id="code-background"><br>
+<code>plt.scatter(x, y)</code><br><br></div>  
+    
+<p>Draw the line of polynomial regression:<br></p>
+    
+<div id="code-background"><br>
+<code>plt.plot(myline, mymodel(myline))</code><br><br></div>  
+    
+<p>Display the diagram:<br></p>
+    
+<div id="code-background"><br>
+<code>plt.show()</code><br><br></div>  
+  
+    
+<h3>R-Squared</h3>
+    
+<p>It is important to know how well the relationship between the values of the x- and y-axis is, if there are no relationship the polynomial regression can not be used to predict anything.<br><br>
+The relationship is measured with a value called the r-squared.<br><br>
+The r-squared value ranges from 0 to 1, where 0 means no relationship, and 1 means 100% related.<br><br>
+Python and the Sklearn module will compute this value for you, all you have to do is feed it with the x and y arrays:<br></p>
+  
+   
+  <div id="code-background">
+  
+<h4><br>Example</h4>
+    <p>How well does my data fit in a polynomial regression?<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code><span id="blue">from</span> sklearn.metrics<span id="blue">import</span> r2_score</code><br><br>
+<code>x = [1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 21, 22]</code><br><br>
+<code>y = [100, 90, 80, 60, 60, 55, 60, 65, 70, 70, 75, 76, 78, 79, 90, 99, 99, 100]</code><br><br>
+<code>mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))</code><br><br>
+  <code><span id="blue">print</span>(r2_score(y, mymodel(x)))<br><br></code>
+</div>
+     
+ <p id="result"> Result:</p>
+ <p>0.9432150416451027</p><br><br>
+       
+  </div>
+  <br><br>   
+    
+<div id="comment">
+  <p><br><strong>Note:</strong> The result 0.94 shows that there is a very good relationship, and we can use polynomial regression in future predictions.<br><br></p></div>
+    
+ 
+<h3>Predict Future Values</h3>
+ 
+<p>Now we can use the information we have gathered to predict future values.<br><br>
+Example: Let us try to predict the speed of a car that passes the tollbooth at around 17 P.M:<br><br>
+To do so, we need the same <span id="red">mymodel</span> array from the example above:<br></p>
+    
+    
+   
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>Predict the speed of a car passing at 17 P.M:<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code><span id="blue">from</span> sklearn.metrics<span id="blue">import</span> r2_score</code><br><br>
+<code>x = [1, 2, 3, 5, 6, 7, 8, 9, 10, 12, 13, 14, 15, 16, 18, 19, 21, 22]</code><br><br>
+<code>y = [100, 90, 80, 60, 60, 55, 60, 65, 70, 70, 75, 76, 78, 79, 90, 99, 99, 100]</code><br><br>
+<code>mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))</code><br><br>
+<code>speed = mymodel(17)</code><br><br>
+<code><span id="blue">print</span>(speed)<br><br></code>
+</div>
+     
+ <p id="result"> Result:</p>
+ <p>88.87331269697987</p><br><br>
+       
+  </div>
+  <br><br>   
+    
+<p>The example predicted a speed to be 88.87, which we also could read from the diagram:</p>   
+    
+<img id= "result-img" src="https://www.w3schools.com/python/img_polynomial_prediction.png" alt="result-img"><br><br>
+    
+<h3>Bad Fit?</h3>
+    
+<p>Let us create an example where polynomial regression would not be the best method to predict future values.</p>
+    
+ 
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>These values for the x- and y-axis should result in a very bad fit for polynomial regression:<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code><span id="blue">import</span> matplotlib.pyplot<span id="blue">as</span> plt</code><br><br>
+<code>x = [89, 43, 36, 36, 95, 10, 66, 34, 38, 20, 26, 29, 48, 64, 6, 5, 36, 66, 72, 40]</code><br><br>
+<code>y = [21, 46, 3, 35, 67, 95, 53, 72, 58, 10, 26, 34, 90, 33, 38, 20, 56, 2, 47, 15]</code><br><br>
+<code>mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))</code><br><br>
+<code>myline = numpy.linspace(2, 95, 100)</code><br>
+<code>plt.scatter(x, y)</code><br>
+<code>plt.plot(myline, mymodel(myline))</code><br>
+<code>plt.show()<br><br></code>
+</div>
+     
+ <p id="result"> Result:</p>
+ <img id= "result-img" src="https://www.w3schools.com/python/img_polynomial_badfit.png" alt="result-img"><br><br>
+       
+  </div>
+  <br><br>   
+    
+    
+<p>And the r-squared value?</p>
+    
+    
+<div id="code-background">
+  
+<h4><br>Example</h4>
+<p>You should get a very low r-squared value.<br></p>
+        
+<div id="exemple-background"><br>
+<code><span id="blue">import</span> numpy</code><br><br>
+<code><span id="blue">from</span> sklearn.metrics<span id="blue">import</span> r2_score</code><br><br>
+<code>x = [89, 43, 36, 36, 95, 10, 66, 34, 38, 20, 26, 29, 48, 64, 6, 5, 36, 66, 72, 40]</code><br><br>
+<code>y = [21, 46, 3, 35, 67, 95, 53, 72, 58, 10, 26, 34, 90, 33, 38, 20, 56, 2, 47, 15]</code><br><br>
+<code>mymodel = numpy.poly1d(numpy.polyfit(x, y, 3))</code><br><br>
+  <code><span id="blue">print</span>(r2_score(y, mymodel(x)))<br><br></code>
+</div>
+     
+ <p id="result"> Result:</p>
+ <p>0.009952707566680652</p><br><br>
+       
+  </div>
+  <br><br>  
+    
+    
+<div id="comment">
+<p>The result: 0.00995 indicates a very bad relationship, and tells us that this data set is not suitable for polynomial regression.<br><br></p>
+ </div> 
+  <br><br>  
+ 
+   
+  </section>
+     
+  
+  
+<section class="main-section" id="Part_2">
+<header><h2>Part 2<h2>
+</header>
+
+  
+  <p> You can find the second part (Multiple Regression,Scale,Train/Test,Decision Tree) of this lection at <a href="https://www.w3schools.com/python/python_ml_multiple_regression.asp" id="source">w3schools.com.</a></p><br><br>
+   
+  </section>
+     
+</main>
+  
+   <!-- Footer with source. -->
+<footer>
+<p id="source-text">Source:<a href="https://www.w3schools.com/python/python_ml_getting_started.asp" id="source">w3schools.com</a></p>
+</footer>
+  
+</body> 
